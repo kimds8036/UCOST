@@ -41,7 +41,7 @@ const App = () => {
     }
   ]);
 
-  // 실시간 주가 시뮬레이션
+  // 실시간 주가 시뮬레이션.
   useEffect(() => {
     if (!isLoggedIn) return;
     const interval = setInterval(() => {
