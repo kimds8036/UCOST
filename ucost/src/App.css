@@ -2,6 +2,604 @@
   text-align: center;
 }
 
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #faf5ff 0%, #eff6ff 50%, #f0f9ff 100%);
+  font-family: Arial, sans-serif;
+}
+
+/* 로그인 박스 (정사각형 형태) */
+.loginBox {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 300px;  /* ✅ 정사각형 */
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Header */
+.header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.headerContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoIcon {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  padding: 0.5rem;
+  border-radius: 12px;
+  color: white;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.5rem 0;
+}
+
+.balanceBox {
+  background: #dcfce7;
+  color: #166534;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.chargeButton {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Hero */
+.heroSection {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.heroGradientText {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  color: #4b5563;
+  max-width: 512px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Features */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Stock Cards */
+.stockCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.stockCardHover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+
+.stockHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stockInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stockAvatar {
+  font-size: 2rem;
+}
+
+.stockName {
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #111827;
+  margin: 0;
+}
+
+.stockChannel {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.categoryTag {
+  background: #ede9fe;
+  color: #7c3aed;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.priceSection {
+  text-align: right;
+}
+
+.stockPrice {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.changeIndicator {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+.positive {
+  color: #059669;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  color: #6b7280;
+}
+
+.statValue {
+  font-weight: 600;
+  color: #111827;
+}
+
+.description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.buyButton {
+  flex: 1;
+  background: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sellButton {
+  flex: 1;
+  background: white;
+  color: #dc2626;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Layout */
+.mainContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem 1rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.filterSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.select {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+/* Stock Grid & Slider */
+.stockGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sliderContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.sliderWrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slideButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: all 0.2s;
+  font-size: 27px;
+}
+
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}
+
+.slideIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.activeIndicator {
+  background: #2563eb;
+}
+
+.inactiveIndicator {
+  background: #d1d5db;
+}
+
+/* Portfolio */
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.portfolioCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+}
+
+.portfolioCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolioTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.portfolioValue {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111827;
+  margin-top: 0.5rem;
+}
+
+.portfolioItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #f3f4f6;
+  margin-bottom: 1rem;
+}
+
+.portfolioItemInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.portfolioItemAvatar {
+  font-size: 1.5rem;
+}
+
+.portfolioItemName {
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.portfolioItemShares {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.portfolioItemValues {
+  text-align: right;
+}
+
+.portfolioItemValue {
+  font-weight: 600;
+  color: #111827;
+}
+
+.portfolioItemProfit {
+  font-size: 0.875rem;
+}
+
+/* Wallet */
+.walletGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.walletCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+}
+
+.walletTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+}
+
+.submitButton {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Transactions */
+.transactionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.transactionDescription {
+  color: #4b5563;
+}
+
+.transactionAmount {
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background: #111827;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footerContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footerLogoText {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.footerDescription {
+  color: #9ca3af;
+}
+
+.footerTitle {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerListItem {
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.footerBottom {
+  border-top: 1px solid #374151;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+  color: #9ca3af;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -21,7 +619,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white
 }
 
 .App-link {
