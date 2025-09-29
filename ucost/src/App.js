@@ -10,7 +10,7 @@ const YouTuberStockSystem = () => {
     { id: 2, name: '침착맨', shares: 15, currentPrice: 980, change: -2.1 }
   ]);
 
-  // 실시간 주가 시뮬레이션
+  // 실시간 주가 시뮬레이션.
   const [stockData, setStockData] = useState([
     {
       id: 1,
